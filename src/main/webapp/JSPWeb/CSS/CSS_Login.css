@@ -1,0 +1,286 @@
+*{
+    margin: 0%;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*  */
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../IMG/modern-living-room-interior-with-sofa-blue-wall-background_802770-306.jpg) no-repeat;
+    background-size: cover;/* CHỈNH HÌNH ẢNH NẰM DƯỚI LOGIN */
+    background-position: center; /*cHỈNH HÌNH ẢNH Ở CHÍNH GIỮA*/
+}
+
+/* login */
+.wrapper_Login{
+    position: relative;
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2); /* LÀM VIỀN BORDER */
+    backdrop-filter: blur(20px); /* HIỆU ÚNG LÀM MỜ */
+    color: white;
+    border-radius: 10px;/* BO TRÒN CÁC GÓC */
+    padding: 30px 40px;
+}
+.wrapper_Login h1{
+    font-size: 36px;
+    text-align: center;
+}
+.inputBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.inputBox input{
+    width: 100%;
+    height: 100%;
+    background: transparent; /* màu trong suốt */
+    border: none;
+    outline: none;  /* Đường Viền */
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+    cursor: pointer;
+
+}
+.inputBox input::placeholder{
+    color: white;
+}
+
+
+.inputBox i{
+    position: absolute;
+    right: 5%;
+    transform: translateY(58%);
+    font-size: 20px;
+    cursor: pointer;
+}
+.wrapper_Login .remember_forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+.remember_forgot label input{
+    accent-color: White;
+    margin-right: 3px;
+}
+
+.remember_forgot a{
+    color: white;
+    text-decoration: none;
+}
+.remember_forgot a:hover{
+    text-decoration: underline;
+
+}
+
+.wrapper_Login .btn{
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.wrapper_Login .register{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+.register p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+
+    /* Register */
+.wrapper_Register{
+    text-align: center;
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2); /* LÀM VIỀN BORDER */
+    backdrop-filter: blur(20px); /* HIỆU ÚNG LÀM MỜ */
+    color: white;
+    border-radius: 10px;/* BO TRÒN CÁC GÓC */
+    padding: 30px 40px;
+}
+
+.wrapper_Register h1{
+    font-size: 36px;
+    text-align: center;
+}
+.wrapper_Register .Name{
+    display: flex;
+    padding-top: 40px;
+
+}
+.Name .first_name{
+    margin: 5px;
+}
+.Name .last_name{
+    margin: 5px;
+}
+.first_name input{
+    width: 100%;
+    height: 80%;
+    background: transparent; /* màu trong suốt */
+    border: none;
+    outline: none;  /* Đường Viền */
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+    cursor: pointer;
+}
+
+.first_name input::placeholder{
+    color: white;
+}
+.last_name input{
+    width: 100%;
+    height: 80%;
+    background: transparent; /* màu trong suốt */
+    border: none;
+    outline: none;  /* Đường Viền */
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+    cursor: pointer;
+}
+.last_name input::placeholder{
+    color: white;
+}
+.inputBox_register{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    
+}
+.inputBox_register input{
+    width: 100%;
+    height: 100%;
+    background: transparent; /* màu trong suốt */
+    border: none;
+    outline: none;  /* Đường Viền */
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+    cursor: pointer;
+
+}
+.inputBox_register input::placeholder{
+    color: white;
+}
+
+
+.inputBox_register i{
+    position: absolute;
+    right: 5%;
+    transform: translateY(58%);
+    font-size: 20px;
+    cursor: pointer;
+} 
+
+.wrapper_Register .btn{
+    width: 100%;
+    height: 45px;
+    background: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.wrapper_Register .btn:hover{
+    background: #00b7ff41;
+    color: white;
+}
+
+.wrapper_Login .btn:hover{
+    background: #00b7ff41;
+    color: white;
+}
+
+.wrapper_Register .login{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+.login p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login p a:hover{
+    text-decoration: underline;
+}
+
+/* Giao Thoa Login_Register */
+.contain_login_Register {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+.wrapper_Login,
+.wrapper_Register {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 45px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.wrapper_Login {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper_Register {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.active .wrapper_Login {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.active .wrapper_Register {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}

@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    border: 0;
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(243, 241, 241);
+    overflow-x: hidden;
+    padding-top: 70px;
+}
+/* header */
+header.header_home_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+header.header_home_menu.scrolled {
+    background-color: rgb(0, 0, 0);
+}
+
+header.header_home_menu img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header_home_menu .menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header_home_menu .menu li {
+    margin: 0 15px;
+}
+
+.header_home_menu .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.header_home_menu .menu li a:hover {
+    color: #daa520;
+    border-bottom: 2px solid #daa520;
+}
+
+header.header_home_menu .social_icon {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    column-gap: 1cm;
+}
+
+header.header_home_menu .menu li,
+header.header_home_menu .social_icon li {
+    position: relative;
+}
+
+header.header_home_menu .menu li a,
+header.header_home_menu .social_icon li a,
+header.header_home_menu .social_icon li i {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+
+header.header_home_menu .social_icon li:hover i {
+    transition: 0.3s;
+}
+
+header.header_home_menu .social_icon li {
+    position: relative;
+}
+.header_home_menu .social_icon li .dropdown {
+    display: block; /* Giữ block để sử dụng hiệu ứng */
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: #222; /* Nền tối */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 200px; /* Chiều rộng dropdown */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    opacity: 0; /* Ban đầu dropdown ẩn */
+    visibility: hidden; /* Tránh dropdown bị tác động khi ẩn */
+    transform: translateY(-10px); /* Dịch chuyển nhẹ lên trên */
+    transition: all 0.3s ease; /* Hiệu ứng mượt khi thay đổi trạng thái */
+}
+
+/* Hiển thị dropdown khi hover */
+.header_home_menu .social_icon li:hover .dropdown {
+    opacity: 1; /* Hiện dropdown */
+    visibility: visible; /* Cho phép tương tác */
+    transform: translateY(0); /* Đưa về vị trí ban đầu */
+}
+
+/* Các phần tử bên trong dropdown */
+.header_home_menu .social_icon li .dropdown li {
+    margin: 10px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Căn đều bên trái */
+    transition: color 0.2s ease; /* Hiệu ứng mượt khi hover từng phần tử */
+}
+
+.header_home_menu .social_icon li .dropdown li:hover {
+    color: #daa520; /* Màu vàng đồng khi hover */
+}
+
+/* Đường kẻ ngang giữa các mục */
+.header_home_menu .social_icon li .dropdown li:not(:last-child) {
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+/* Layer2 */
+.layer2{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    padding-top: 20px;
+}
+.Contain_shopping_Cart{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 50px 0;
+    justify-content: space-between;
+    display: flex;
+}
+/* left */
+.Contain_shopping_Cart {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Giữ cho "text_button" và các phần tử con của nó nằm cùng một hàng ngang */
+.text_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text_button .text {
+    font-size: 20px;
+}
+
+.text_button #cart-actions {
+    margin-bottom: 10px;
+}
+
+/* Phần "product-item" có thể cuộn được */
+.Left {
+    width: 100%;
+    max-height: 600px; /* Đặt chiều cao tối đa cho phần chứa các sản phẩm */
+    overflow-y: auto; /* Thêm thanh cuộn dọc khi có quá nhiều sản phẩm */
+    padding-right: 10px; /* Để tránh thanh cuộn che khuất sản phẩm */
+    margin-left: 250px;
+}
+/* Định dạng cho các sản phẩm */
+.product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd; /* Tùy chọn */
+    border-radius: 5px; /* Tùy chọn */
+}
+
+.product-item img {
+    margin-right: 10px;
+}
+
+.product-item span {
+    flex-grow: 1;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.product-item input[type="number"] {
+    width: 60px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.product-item form {
+    margin: 0;
+}
+
+
+/* Các nút "Xóa tất cả" và "Xóa 2 sản phẩm" */
+#delete-all, #delete-selected {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e71212;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#delete-all:hover, #delete-selected:hover {
+    background-color: #ff2a2a;
+}
+
+/* right */
+.Contain_shopping_Cart .right{
+    padding: 0px 300px 0px 300px;
+}
+.Infor_shopping {
+    border: 2px solid #e4e1e1; /* Viền bao quanh */
+    padding: 20px;
+    border-radius: 8px; /* Bo góc (tuỳ chỉnh nếu không cần) */
+    max-width: 400px; /* Đặt kích thước tối đa nếu cần */
+    /* margin: 0 auto; Căn giữa khối */
+    margin-bottom: 10px;
+    background-color: #ffffff; /* Màu nền nhạt */
+}
+
+.Infor_shopping h2 {
+    text-align: center; /* Căn giữa tiêu đề */
+    margin-bottom: 15px; /* Khoảng cách phía dưới */
+}
+
+.Infor_shopping .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* Khoảng cách giữa các phần */
+    padding-bottom: 10px; /* Thêm khoảng cách cho đường kẻ */
+    border-bottom: 1px solid #ddd; /* Vạch kẻ ngang */
+}
+
+.Infor_shopping button {
+    display: block; /* Đảm bảo nút là khối */
+    width: 90%; /* Chiều rộng 90% */
+    margin: 20px auto 0; /* Căn giữa và cách phía trên */
+    padding: 10px 0; /* Thêm khoảng cách trong nút */
+    background-color: #ff0000; /* Màu nền nút */
+    color: #fff; /* Màu chữ */
+    border: none; /* Xóa viền mặc định */
+    border-radius: 5px; /* Bo góc nút */
+    font-size: 16px; /* Cỡ chữ */
+    font-weight: bold; /* Đậm chữ */
+    cursor: pointer; /* Con trỏ khi hover */
+}
+
+.Infor_shopping button:hover {
+    background-color: #dd0404; /* Màu nền khi hover */
+}
+
+.right .Infor_text{
+    font-size: 16px;
+    padding-right: 150px;
+}
+
+.right .Infor_text p i {
+    font-weight: 600;
+}
+
+.right .Infor_text p span {
+    font-weight: 600;
+}
+
+/* Layer4 */
+.layer4{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 100px 0 100px 0;
+    margin: 0   ;
+}
+.cerfiticate{
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+}
+.freeship{
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+}
+.support{
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+}
+
+.footer{
+    width: 100%;
+    height: 250px;
+    margin: auto;
+    padding-top: 59px;
+    background-color: black;
+    display:flex;
+    justify-content: space-evenly;
+}
+.showroom_footer{
+    display: block;
+}
+.suport_footter{
+    display: block;
+}
+.follow_footer{
+    display: block;
+}
+
+.showroom_footer h2{
+    align-items: center;
+    align-content: center;
+    color: white;
+}
+.suport_footter h2{
+    align-items: center;
+    align-content: center;
+    color: white;
+}
+.follow_footer h2{
+    align-items: center;
+    align-content: center;
+    color: white;
+}
+
+.showroom_footer ul li{
+    list-style-type: disc;
+    color: rgb(204, 203, 203);
+    font-size: 18px;
+}
+.suport_footter ul li{
+    list-style-type: disc;
+    color: rgb(204, 203, 203);
+    font-size: 18px;
+}
+.follow_footer .icon_footer{
+    margin-top: 10px;
+}
+.follow_footer .icon_footer i{
+    margin: 3px;
+    padding: 10px;
+}
+
+
