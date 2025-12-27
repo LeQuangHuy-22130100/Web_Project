@@ -1,0 +1,17 @@
+Cài đặt môi trường: Cài đặt JDK (8+), Apache Tomcat 9/10, và MySQL Server.
+
+Cài đặt Thư viện: Đảm bảo có các file .jar sau trong thư mục webapp/WEB-INF/lib/:
+
+    mysql-connector-java.jar.
+
+    lombok.jar
+
+    jstl.jar
+
+Cấu hình Database:
+
+    Chạy script SQL ở phần 1 vào MySQL.
+
+Kiểm tra file src/main/resources/db.properties hoặc DBConnect.java để chắc chắn URL là: jdbc:mysql://localhost:3306/sofadata.
+
+Chạy dự án: Import vào Eclipse/IntelliJ dưới dạng Maven Project, sau đó chọn Run on Server với Tomcat.

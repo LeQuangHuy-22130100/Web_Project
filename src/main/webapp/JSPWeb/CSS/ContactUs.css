@@ -1,0 +1,191 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header.header_home_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: Tahoma, sans-serif;
+  font-size: 20px;
+  color: white;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+header.header_home_menu.scrolled {
+  background-color: rgb(0, 0, 0);
+}
+
+header.header_home_menu img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header_home_menu .menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header_home_menu .menu li {
+  margin: 0 15px;
+}
+
+.header_home_menu .menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.header_home_menu .menu li a:hover {
+  color: #daa520;
+  border-bottom: 2px solid #daa520;
+}
+
+header.header_home_menu .social_icon {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  column-gap: 1cm;
+}
+
+header.header_home_menu .menu li,
+header.header_home_menu .social_icon li {
+  position: relative;
+}
+
+header.header_home_menu .menu li a,
+header.header_home_menu .social_icon li a,
+header.header_home_menu .social_icon li i {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+
+header.header_home_menu .social_icon li:hover i {
+  transition: 0.3s;
+}
+
+header.header_home_menu .social_icon li {
+  position: relative;
+}
+.header_home_menu .social_icon li .dropdown {
+  display: block; /* Giữ block để sử dụng hiệu ứng */
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #222; /* Nền tối */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  width: 200px; /* Chiều rộng dropdown */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  opacity: 0; /* Ban đầu dropdown ẩn */
+  visibility: hidden; /* Tránh dropdown bị tác động khi ẩn */
+  transform: translateY(-10px); /* Dịch chuyển nhẹ lên trên */
+  transition: all 0.3s ease; /* Hiệu ứng mượt khi thay đổi trạng thái */
+}
+
+/* Hiển thị dropdown khi hover */
+.header_home_menu .social_icon li:hover .dropdown {
+  opacity: 1; /* Hiện dropdown */
+  visibility: visible; /* Cho phép tương tác */
+  transform: translateY(0); /* Đưa về vị trí ban đầu */
+}
+
+/* Các phần tử bên trong dropdown */
+.header_home_menu .social_icon li .dropdown li {
+  margin: 10px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Căn đều bên trái */
+  transition: color 0.2s ease; /* Hiệu ứng mượt khi hover từng phần tử */
+}
+
+.header_home_menu .social_icon li .dropdown li:hover {
+  color: #daa520; /* Màu vàng đồng khi hover */
+}
+
+/* Đường kẻ ngang giữa các mục */
+.header_home_menu .social_icon li .dropdown li:not(:last-child) {
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+form {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+input[type="text"]:focus, textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+}
+
+footer hr {
+  margin: 20px auto;
+  width: 80%;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
