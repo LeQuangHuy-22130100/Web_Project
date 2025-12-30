@@ -220,5 +220,39 @@ public class productDAO {
         return products;
     }
 
+        public List<Product> findProductbyName(String name) throws SQLException, ClassNotFoundException {
+        List<Product> products = new ArrayList<>();
+        String query = "SELECT *, sizes.Size\n" +
+                        "FROM Product\n" +
+                        "JOIN sizes ON product.SizeID = sizes.SizeID\n" +
+                        "WHERE Name LIKE ? COLLATE utf8mb4_general_ci;";
+        try (
+
+                Connection con = DBConnect.get().getConnection();
+                PreparedStatement pstmt = con.prepareStatement(query)
+        ) {
+            pstmt.setString(1, "%" + name + "%");
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    Product product = new Product();
+                    categories category = new categories(rs.getInt("CategoryID"), rs.getString("Name"));
+                    product.setId(rs.getInt(1));
+                    product.setCategoryID(category);
+                    product.setName(rs.getString(3));
+                    product.setImage(rs.getString(4));
+                    product.setPrice(rs.getDouble(5));
+                    product.setDescription(rs.getString(6));
+                    product.setStock(rs.getInt(7));
+                    product.setMatarial(rs.getString(8));
+                    Sizes sizes = new Sizes(rs.getInt("SizeID"), rs.getString("Size"));
+                    product.setSize(sizes);
+                    products.add(product);
+                }
+                rs.close();
+                stmt.close();
+            }
+        }
+        return products;
+    }
 }
     

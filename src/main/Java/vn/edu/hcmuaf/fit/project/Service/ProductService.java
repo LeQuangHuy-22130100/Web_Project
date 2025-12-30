@@ -32,6 +32,9 @@ public class ProductService {
         return productDao.getByID(id);
     }
 
+    public List<Product> findProductByName(String keyword) throws SQLException, ClassNotFoundException {
+        return productDao.findProductbyName(keyword);
+    }
 
     // phan trang Product
  
