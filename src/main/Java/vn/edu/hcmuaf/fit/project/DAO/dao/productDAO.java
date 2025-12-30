@@ -261,5 +261,21 @@ public class productDAO {
         return 0;
     }
 
-
+    // phân trang theo size
+    public int countProductSize(String sizeID) throws SQLException, ClassNotFoundException {
+        String query = "SELECT COUNT(ProductID) AS ProductCount\n" +
+                "FROM product\n" +
+                "WHERE SizeID = ?;";
+        try (
+                Connection con = DBConnect.get().getConnection();
+                PreparedStatement pstmt = con.prepareStatement(query)) {
+            pstmt.setString(1, sizeID);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    return rs.getInt(1);
+                }
+            }
+        }
+        return 0;
+    }
 }

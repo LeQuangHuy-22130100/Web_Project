@@ -37,6 +37,18 @@ public class ProductService {
     }
 
     // phan trang Product
+    public int countProduct() throws SQLException, ClassNotFoundException {
+        return productDao.countProduct();
+    }
+
+    public List<Product> PageProducts(int index) throws SQLException, ClassNotFoundException {
+        return productDao.PageProducts(index);
+    }
+
+    //phan trang size
+    public int countProductSize(String sizeID) throws SQLException, ClassNotFoundException {
+        return productDao.countProductSize(sizeID);
+    }
  
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
