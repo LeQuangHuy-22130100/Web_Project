@@ -49,7 +49,10 @@ public class ProductService {
     public int countProductSize(String sizeID) throws SQLException, ClassNotFoundException {
         return productDao.countProductSize(sizeID);
     }
- 
+    //phan trang price
+    public List<Product> PageProductsPriceRange(String priceID, int index) throws SQLException, ClassNotFoundException {
+        return productDao.PageProductsPriceRange(priceID, index);
+    }
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 //        ProductService productService = new ProductService();
