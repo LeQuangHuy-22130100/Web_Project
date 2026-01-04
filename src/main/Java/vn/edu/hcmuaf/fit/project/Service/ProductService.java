@@ -53,6 +53,10 @@ public class ProductService {
     public List<Product> PageProductsPriceRange(String priceID, int index) throws SQLException, ClassNotFoundException {
         return productDao.PageProductsPriceRange(priceID, index);
     }
+    //phan trang category
+    public List<Product> PageProductCategory(String CategoryID, int page) throws SQLException, ClassNotFoundException {
+        return productDao.PageProductsCategoryID(CategoryID,page);
+    }
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 //        ProductService productService = new ProductService();
