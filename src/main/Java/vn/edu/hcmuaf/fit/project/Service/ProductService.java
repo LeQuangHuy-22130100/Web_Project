@@ -58,6 +58,27 @@ public class ProductService {
         return productDao.PageProductsCategoryID(CategoryID,page);
     }
 
+    //sort product
+    public List<Product> sortTang() throws SQLException, ClassNotFoundException {
+        return productDao.sortTang();
+    }
+
+    public List<Product> sortGiam() throws SQLException, ClassNotFoundException {
+        return productDao.sortGiam();
+    }
+
+    public void deleProduct(String id) throws SQLException, ClassNotFoundException {
+        productDao.deleProduct(id);
+    }
+
+    public void addProduct (String id, String cateID, String name, String img, String price, String description, String stock, String material, String sizeID, String priceID) throws SQLException, ClassNotFoundException {
+        productDao.addProduct(id,cateID,name,img,price,description,stock,material,sizeID,priceID);
+    }
+
+    public List<Product> getProductsNew() throws SQLException, ClassNotFoundException {
+        return productDao.getProductsNew();
+    }
+
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 //        ProductService productService = new ProductService();
 //        String sizeRange = "Dưới 2,5m";
